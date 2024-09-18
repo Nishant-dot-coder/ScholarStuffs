@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Arial, sans-serif;
+   
+}
+
+header {
+    font-family: "Poppins";
+    letter-spacing: 5px;
+   
+    color: rgb(0, 247, 255);
+   text-shadow: 2px 2px 2px rgb(0, 0, 0);
+   
+   font-style: italic;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    background: white;
+    padding: 10px 20px;
+    z-index: 100;
+}
+
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 50px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+#home{
+    background: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px aqua;
+    font-family: "Poppins";
+    letter-spacing: 3px;
+    text-shadow: 1px 1px 6px rgb(69, 69, 69);
+}
+#home h2{
+    font-family: "Poppins";
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 6px rgb(69, 69, 69);
+}
+
+#home .box{
+    
+    padding: 8px;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 2px solid rgb(0, 4, 255);
+   box-shadow: 1px 1px 8px rgb(16, 9, 240);
+   text-shadow: none;
+}
+#home .box:hover{
+    box-shadow: 1px 1px 15px rgb(47, 0, 255);
+    scale: 102%;
+}
+
+.content .box {
+    margin: 20px 0;
+    padding: 10px;
+   
+    cursor: pointer;
+}
+
+.sub-content {
+    display: none;
+    padding: 10px;
+    
+    background: #ffffff;
+}
+.main-container
+{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+@media (max-width: 455px) {
+    .main-container {
+        flex-direction: column;
+    }
+   }
+
+.main-div{
+   
+    box-shadow: 2px 2px 6px blueviolet;
+    border-radius: 5px;
+    margin: 4px;
+   padding: 20px;
+   text-shadow: none;
+}
+.main-div button{
+    color: white;
+    background-color: rgb(41, 41, 255);
+    border: none;
+    border-radius: 4px;
+    padding: 4px;
+    margin: 4px;
+}
+.main-div button:hover{
+    background-color: rgb(0, 0, 254);
+    box-shadow: 2px 2px 2px blueviolet;
+    scale: 104%;
+}
+
+.main-div .sub-div{
+    border: 2px solid rgb(187, 179, 255);
+    margin: 2px;
+}
+
+#about{
+    background: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px aqua;
+    
+}
+ h2{
+    font-family: "Poppins";
+    letter-spacing: 5px;
+    text-shadow: 1px 1px 6px rgb(69, 69, 69);
+}
+
+.about-text {
+    text-align: center;
+    margin-top: 20px;
+}
+#contact{
+    /* background-image: linear-gradient(to top,rgb(220, 255, 255),aqua); */
+    background: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px aqua;
+}
+.wave-background {
+    position: relative;
+    height: 300px;
+    background: linear-gradient(135deg, aqua 25%, #fff 25%, #fff 50%, aqua 50%,aqua 75%, #fff 75%, #fff 100%);
+    background-size: 56.57px 56.57px;
+    animation: animateWave 3s linear infinite;
+    border-radius: 10px;
+    border: none;
+}
+
+@keyframes animateWave {
+    0% { background-position: 0 0; }
+    100% { background-position: 56.57px 56.57px; }
+}
+
+.contact-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+@keyframes rotate-sphere {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* cube */
+.big-container {
+    margin: 8px;
+    padding: 0;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px aqua;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+   
+}
+
+.cube-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+   
+}
+
+.cube-row {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.cube {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease-out;
+
+}
+
+.face {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+   color: rgb(255, 255, 255);
+   text-shadow: 1px 1px 6px rgb(123, 123, 123);
+   
+    background:rgb(0, 0, 0);
+    border: 1px solid #ccc;
+}
+
+.front  { transform: rotateY(  0deg) translateZ(25px); }
+.back   { transform: rotateY(180deg) translateZ(25px); }
+.left   { transform: rotateY(-90deg) translateZ(25px); }
+.right  { transform: rotateY( 90deg) translateZ(25px); }
+.top    { transform: rotateX( 90deg) translateZ(25px); }
+.bottom { transform: rotateX(-90deg) translateZ(25px); }
+
+@media (max-width: 768px) {
+    .cube-container {
+        gap: 40px;
+    }
+    .cube {
+        width: 40px;
+        height: 40px;
+    }
+    .face {
+        width: 40px;
+        height: 40px;
+        font-size: 25px;
+    }
+}
+
+/* sphere */
+.sp-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border-radius: 10px;
+    border: none;
+    
+    font-family: "Poppins";
+}
+
+.scene {
+    width: 400px;
+    height: 400px;
+    perspective: 800px;
+}
+
+.sphere {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(0deg) rotateY(0deg);
+    transition: transform 0.5s ease;
+}
+
+.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.circle::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(to right top,aqua,blue);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 36deg)) translateZ(180px);
+}
+
+/* colorful cursor */
+
+span{
+    width: 50%;
+    height: 20px;
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    background-color: #05eaff;
+    box-shadow: 20px 20px 60px blueviolet,
+                 -20px -20px 60px aquamarine ;
+    transform: translate(-50%, -50%);
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+    0%{
+        transform: translate(-50%, 50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+
+    100%{
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* game section */
+#game{
+   
+    background: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 2px 2px 10px aqua;
+}
+
+
+#main-div {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease;
+    margin: 20px 0;
+    padding: 10px;
+   color: white;
+   text-shadow: 2px 2px 2px rgb(255, 37, 226);
+   font-size: larger;
+   box-shadow: 2px 2px 2px rgb(255, 37, 226),-2px -2px 2px rgb(255, 37, 226);
+    
+}
+
+#main-div.expanded {
+    height: 190px; 
+}
+
+.sub-div {
+    padding: 20px;
+    border-bottom: 1px solid #ffffff;
+}
+
+#toggle-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    border: 2px solid blue;
+    background: rgb(0, 63, 251);
+    border-radius: 40px;
+    box-shadow: 1px 1px 2px blue, -1px -1px 2px blue;
+}
+#toggle-button:hover{
+    scale: 105%;
+}
+
+#main-div button{
+    cursor: pointer;
+   color: white;
+    background: rgb(0, 34, 255);
+    border-radius: 4px;
+    border: none;
+    margin: 4px;
+    padding: 4px;
+    font-size: large;
+}
+
+input{
+    border: 2px solid rgb(255, 15, 231);
+    border-radius: 4px;
+    font-size: large;
+    margin: 4px;
+
+}
